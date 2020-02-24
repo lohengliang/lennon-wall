@@ -7,7 +7,8 @@
     "build-babel": "babel -d ./build ./src -s --copy-files",
     "clean": "rm -rf build",
     "start": "npm run build && node ./build/bin/www",
-    "start:dev": "nodemon --exec babel-node ./src/bin/www"
+    "start:dev": "nodemon --exec babel-node ./src/bin/www",
+    "test": "jest"
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",
@@ -27,6 +28,14 @@
   },
   "devDependencies": {
     "@babel/node": "^7.8.4",
-    "nodemon": "^2.0.2"
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "supertest": "^4.0.2"
   }
 }

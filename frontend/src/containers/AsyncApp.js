@@ -8,6 +8,7 @@ import AddPost from "./AddPost";
 class AsyncApp extends Component {
   componentDidMount() {
     const { wallName, dispatch } = this.props;
+    console.log(`${process.env.PUBLIC_URL}`);
     dispatch(fetchPosts(wallName || "wall"));
   }
   render() {

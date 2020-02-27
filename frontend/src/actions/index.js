@@ -19,14 +19,16 @@ function receivePosts(wall, json) {
 export function fetchPosts(wallName) {
   return dispatch => {
     dispatch(requestPosts(wallName));
-    return fetch(`http://localhost:5000/posts/retrieve?wallName=${wallName}`)
+    return fetch(
+      `https://lit-brushlands-30026.herokuapp.com/posts/retrieve?wallName=${wallName}`
+    )
       .then(response => response.json())
       .then(json => dispatch(receivePosts(wallName, json)));
   };
 }
 export function addPost(wallName, value) {
   return dispatch => {
-    return fetch("http://localhost:5000/posts/create", {
+    return fetch("https://lit-brushlands-30026.herokuapp.com/posts/create", {
       method: "post",
       headers: {
         "Content-Type": "application/json"

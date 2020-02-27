@@ -11,7 +11,10 @@ export default class Root extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <Route path="/:wall?" component={AsyncApp} />
+          <Route
+            path={`${process.env.PUBLIC_URL}/:wall?`}
+            component={AsyncApp}
+          />
         </Router>
       </Provider>
     );

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/lennon-wall/precache-manifest.fec5e6b1588f85ec951f9f7d46914d55.js"
+  "/lennon-wall/precache-manifest.81a55d43e9992169b92c0bee2a56c631.js"
 );
 
 self.addEventListener('message', (event) => {

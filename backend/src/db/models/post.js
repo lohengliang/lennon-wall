@@ -2,7 +2,8 @@ module.exports = (sequelize, DataTypes) => {
   const Post = sequelize.define(
     "Post",
     {
-      value: DataTypes.STRING
+      value: DataTypes.STRING,
+      SignedInUsername: DataTypes.STRING
     },
     {}
   );

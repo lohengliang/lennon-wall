@@ -5,7 +5,9 @@ export default class Posts extends Component {
     return (
       <ul>
         {this.props.posts.map((post, i) => (
-          <li key={i}>{post.value}</li>
+          <li key={i}>
+            {post.SignedInUsername || "Anonymous"} : {post.value}
+          </li>
         ))}
       </ul>
     );
